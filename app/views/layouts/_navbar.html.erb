@@ -1,0 +1,17 @@
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <div style="display: flex">
+    <h4 style="margin-right: 10px;"><%= link_to "Home", root_path %></h4>
+    <% if current_user %>
+      <h4 style="margin-right: 10px;"><%= link_to "My posts", posts_myposts_path %></h4>
+      <h4><%= link_to "Account", edit_user_registration_path %></h4>
+    <% end %>
+  </div>
+  <div>
+    <% if current_user %>
+      <%= button_to "Log out", destroy_user_session_path, method: 'delete' %></h4>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path %>
+      <span style="margin-left: 10px;"><%= link_to "Log in", new_user_session_path %></span>
+    <% end %>
+  </div>
+</div>
