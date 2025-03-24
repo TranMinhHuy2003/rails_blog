@@ -3,7 +3,7 @@
     <h4 style="margin-right: 10px;"><%= link_to "Home", root_path %></h4>
     <% if current_user %>
       <h4 style="margin-right: 10px;"><%= link_to "My posts", posts_myposts_path %></h4>
-      <h4><%= link_to "Account", edit_user_registration_path %></h4>
+      <h4><%= link_to "Account", current_user %></h4>
     <% end %>
   </div>
   <div>
